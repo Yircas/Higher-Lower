@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher or Lower | Random Anime</title>
+</head>
+<body>
+    <h1> This is a random anime! </h1>
+    <p>There should be information from a random anime show here.</p>
+    <div>
+        <ul>
+            <li>Title: {{title}}</li>
+            <li>Start - End: {{start_date}} - {{end_date}}</li>
+            <li>Score: {{mean}}</li>
+            <img src="{{main_picture.large}}" alt="Image">
+        </ul>
+    </div>
+    <button onclick = "location.href = '{% url 'random_anime' %}'">Show me a different anime!</button>
+    <button onclick = "location.href = '{% url 'home' %}'">Homepage</button>
+</body>
+</html>
