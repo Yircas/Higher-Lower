@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Higher or Lower | Home</title>
-</head>
-<body>
-    <h1> This is the Homepage, IKZ! </h1>
-    <p>There should be buttons here leading to the Higher or Lower game.</p>
-    <button onclick = "location.href = '{% url 'random_anime' %}'">Show me random anime!</button>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+
+    <h1> Welcome to the Higher or Lower Game (MyAnimeList ver)! </h1>
+    <p>This is a replica of the original Higher Lower game. Guess, which Anime/Manga has a higher score on MyAnimeList!</p>
+    <ul>
+        <li>Note: The game is still in development.</li>
+    </ul>
+    <button onclick = "location.href = '{% url 'display' 'anime' %}'">Show me random anime!</button>
+    <button onclick = "location.href = '{% url 'display' 'manga' %}'">Show me random manga!</button>
+
+{% endblock %}

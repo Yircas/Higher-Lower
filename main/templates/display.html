@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} Display {{category}} {% endblock %}
+
+{% block content %}
+
+    <h1> This is a random {{category}}! </h1>
+    <p>There should be information from a random {{category}} here.</p>
+    <div>
+        <ul>
+            <li>Title: {{title}}</li>
+            <li>Start - End: {{start_date}} - {{end_date}}</li>
+            <li>Score: {{mean}}</li>
+            <img src="{{main_picture.large}}" alt="Image">
+        </ul>
+    </div>
+    <button onclick = "location.href = '{% url 'display' category %}'">Show me a different {{category}}!</button>
+    <button onclick = "location.href = '{% url 'home' %}'">Homepage</button>
+
+{% endblock %}
